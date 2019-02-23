@@ -20,7 +20,7 @@
         </nav>
         <div class="container">
             <div class="my-4">
-                <div class="card mb-3 p-2" v-for="n in maxIndex" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <div class="card mb-3 p-2" v-for="n in maxIndex" data-aos-once="true" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <p class="counter">
                         #{{n}}
                     </p>
@@ -72,7 +72,9 @@
 </template>
 
 <script>
-    AOS.init();
+    AOS.init({
+        once: false,
+    });
     export default {
         name: 'Infinity',
         created() {
