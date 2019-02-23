@@ -13,14 +13,14 @@
                         <i class='bx bx-code-block m-0 h4 position-relative text-dark' style="bottom: -5px"></i>
                     </a>
                     <a href="https://github.com/Mvtthew/wikipedia-infinity-scroll" class="ml-1" target="_blank">
-                        <i class='bx bxl-github m-0 h4 position-relative text-dark' style="bottom: -5px"></i>
+                        <i class='bx bxl-github m-0 h4 position-relative text-dark animated slower pulse' style="bottom: -5px"></i>
                     </a>
                 </p>
             </div>
         </nav>
         <div class="container">
             <div class="my-4">
-                <div class="card mb-3 p-2" v-for="n in maxIndex" v-bind:id="'a' + n">
+                <div class="card mb-3 p-2" v-for="n in maxIndex" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
                     <p class="counter">
                         #{{n}}
                     </p>
@@ -72,6 +72,7 @@
 </template>
 
 <script>
+    AOS.init();
     export default {
         name: 'Infinity',
         created() {
