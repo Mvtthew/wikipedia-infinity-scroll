@@ -2,23 +2,24 @@
     <div class="infinity">
         <nav class="navbar navbar-light bg-light">
             <div class="container">
-                <span class="navbar-brand mb-0 h1">Wikipedia infinity scroll!</span>
+                <span class="navbar-brand mb-0 h1">Wikipedia infinity!</span>
                 <p class="ml-auto mb-0">by Mvtthew | <a href="https://github.com/mvtthew"><i class='bx bxl-github'></i></a></p>
+
             </div>
         </nav>
         <div class="container">
-            <div class="card p-4 my-5">
+            <div class="card p-4 my-2">
                 <div class="card mb-3 p-2" v-for="n in maxIndex" v-bind:id="'a' + n">
                     <h2>
                         {{results[1][n-1]}}
                     </h2>
-                    <p>
+                    <p class="my-4">
                         {{results[2][n-1]}}
                     </p>
                     <a v-bind:href="results[3][n-1]">Read more...</a>
                 </div>
                 <div class="loading" v-show="loading">
-                    <p class="m-0 display-2 text-center"><i class='bx bx-loader-alt bx-spin'></i></p>
+                    <p class="m-0 display-3 text-center"><i class='bx bx-loader-alt bx-spin'></i></p>
                 </div>
             </div>
         </div>
@@ -54,7 +55,7 @@
         methods: {
             getResults() {
                 this.loading = true;
-                const search = this.random(2);
+                const search = this.random(parseInt(Math.random()*2)+1);
                 fetch('https://en.wikipedia.org/w/api.php?&origin=*&action=opensearch&search=' + search, {
                     method: 'GET',
                 }).then(res => res.json()).then(data => {
