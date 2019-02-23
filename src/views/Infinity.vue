@@ -15,7 +15,7 @@
                     <p>
                         {{results[2][n-1]}}
                     </p>
-                    <a :href="results[2][n-1]">Read more...</a>
+                    <a v-bind:href="results[3][n-1]">Read more...</a>
                 </div>
                 <div class="loading" v-show="loading">
                     <p class="m-0 display-2 text-center"><i class='bx bx-loader-alt bx-spin'></i></p>
