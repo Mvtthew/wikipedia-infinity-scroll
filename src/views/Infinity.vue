@@ -8,7 +8,7 @@
                 <p class="m-0 text-dark">
                     Start scrolling down!
                 </p>
-                <p class="ml-auto mb-0 small text-white">by Mvtthew
+                <p class="ml-auto mb-0 small text-dark">by Mvtthew
                     <a href="https://mvtthew.pl" class="ml-1" target="_blank">
                         <i class='bx bx-code-block m-0 h4 position-relative text-dark' style="bottom: -5px"></i>
                     </a>
