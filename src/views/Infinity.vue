@@ -3,12 +3,20 @@
         <nav class="navbar navbar-light bg-light">
             <div class="container">
                 <span class="navbar-brand mb-0 h1">Wikipedia infinity!</span>
-                <p class="ml-auto mb-0">by Mvtthew | <a href="https://github.com/mvtthew"><i class='bx bxl-github'></i></a></p>
-
+            </div>
+            <div class="container">
+                <p class="m-0">
+                    Start scrolling down!
+                </p>
+                <p class="ml-auto mb-0 small">by Mvtthew
+                    <a href="https://github.com/Mvtthew/wikipedia-infinity-scroll">
+                        <i class='bx bxl-github text-dark m-0 h4 position-relative' style="bottom: -5px"></i>
+                    </a>
+                </p>
             </div>
         </nav>
         <div class="container">
-            <div class="card p-4 my-2">
+            <div class="my-4">
                 <div class="card mb-3 p-2" v-for="n in maxIndex" v-bind:id="'a' + n">
                     <h2>
                         {{results[1][n-1]}}
@@ -55,7 +63,7 @@
         methods: {
             getResults() {
                 this.loading = true;
-                const search = this.random(parseInt(Math.random()*2)+1);
+                const search = this.random(parseInt(Math.random() * 2) + 1);
                 fetch('https://en.wikipedia.org/w/api.php?&origin=*&action=opensearch&search=' + search, {
                     method: 'GET',
                 }).then(res => res.json()).then(data => {
@@ -70,8 +78,8 @@
             random(n) {
                 const fromWhat = 'qwertyuiopasdfghjklzxcvbnm';
                 let toReturn = '';
-                for (let i = 0; i < n; i++){
-                    toReturn += fromWhat[parseInt(Math.random()*fromWhat.length)];
+                for (let i = 0; i < n; i++) {
+                    toReturn += fromWhat[parseInt(Math.random() * fromWhat.length)];
                 }
                 return toReturn;
             },
@@ -80,12 +88,14 @@
 </script>
 
 <style>
-    .navbar{
+    .navbar {
         position: sticky;
         top: 0;
         z-index: 10000;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
-    .loading{
+
+    .loading {
 
     }
 </style>
