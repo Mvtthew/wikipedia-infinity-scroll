@@ -1,4 +1,5 @@
-# wikipedia-scroll
+# Wikipedia Infinity Scroll
+By Mvtthew!
 
 ## Project setup
 ```
