@@ -9,7 +9,10 @@
                     Start scrolling down!
                 </p>
                 <p class="ml-auto mb-0 small">by Mvtthew
-                    <a href="https://github.com/Mvtthew/wikipedia-infinity-scroll">
+                    <a href="https://mvtthew.pl" class="ml-1" target="_blank">
+                        <i class='bx bx-code-block text-dark m-0 h4 position-relative' style="bottom: -5px"></i>
+                    </a>
+                    <a href="https://github.com/Mvtthew/wikipedia-infinity-scroll" class="ml-1" target="_blank">
                         <i class='bx bxl-github text-dark m-0 h4 position-relative' style="bottom: -5px"></i>
                     </a>
                 </p>
@@ -36,12 +39,33 @@
         </div>
         <div class="last-search">
             <div class="container">
-                <p class="m-0">
-                    Last search
-                </p>
-                <strong>
-                    <i class='bx bx-search'></i> {{results[0][maxLastSearch-1]}}
-                </strong>
+                <div class="row">
+                    <div class="col-4 text-center">
+                        <p class="m-0 small">
+                            Last search
+                        </p>
+                        <strong>
+                            <i class='bx bx-search'></i> {{results[0][maxLastSearch-1]}}
+                        </strong>
+                    </div>
+                    <div class="col-4 text-center">
+                        <p class="m-0 small">
+                            Searches
+                        </p>
+                        <strong>
+                            <i class='bx bx-sort-up'></i> {{maxLastSearch}}
+                        </strong>
+                    </div>
+                    <div class="col-4 text-center">
+                        <p class="m-0 small">
+                            Articles
+                        </p>
+                        <strong>
+                            <i class='bx bx-calendar-check'></i> {{maxIndex}}
+                        </strong>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
@@ -66,7 +90,6 @@
                     []
                 ],
                 maxIndex: 0,
-                lastSearch: 0,
                 maxLastSearch: 0,
             }
         },
