@@ -1,19 +1,19 @@
 <template>
     <div class="infinity">
-        <nav class="navbar navbar-light bg-light">
+        <nav class="navbar navbar-dark">
             <div class="container">
                 <span class="navbar-brand mb-0 h1">Wikipedia infinity! <i class='bx bxf bx-infinite'></i></span>
             </div>
             <div class="container">
-                <p class="m-0">
+                <p class="m-0 text-white">
                     Start scrolling down!
                 </p>
-                <p class="ml-auto mb-0 small">by Mvtthew
+                <p class="ml-auto mb-0 small text-white">by Mvtthew
                     <a href="https://mvtthew.pl" class="ml-1" target="_blank">
-                        <i class='bx bx-code-block text-dark m-0 h4 position-relative' style="bottom: -5px"></i>
+                        <i class='bx bx-code-block m-0 h4 position-relative text-white' style="bottom: -5px"></i>
                     </a>
                     <a href="https://github.com/Mvtthew/wikipedia-infinity-scroll" class="ml-1" target="_blank">
-                        <i class='bx bxl-github text-dark m-0 h4 position-relative' style="bottom: -5px"></i>
+                        <i class='bx bxl-github m-0 h4 position-relative text-white' style="bottom: -5px"></i>
                     </a>
                 </p>
             </div>
@@ -137,22 +137,35 @@
 </script>
 
 <style>
+    body{
+        background-color: #ECEFF1;
+    }
+
+    .card{
+        background-color: #fff;
+        box-shadow: 0px 0px 21px -17px rgba(0,0,0,0.75);
+    }
+
     .navbar {
         position: sticky;
         top: 0;
         z-index: 10000;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         padding: 0.5rem 0.1rem;
+        background-color: #546E7A;
+        box-shadow: 0 4px 6px -1px gray;
     }
 
     .last-search {
         position: fixed;
         bottom: 0;
         z-index: 10000;
-        background: #f8f9fa !important;
+        background: #607D8B !important;
         border-top: 1px solid rgba(0, 0, 0, 0.1);
         width: 100%;
         padding: 0.5rem 0.1rem;
+        color: #fff;
+        box-shadow: 0 -4px 6px -1px gray;
     }
 
     .loading {
